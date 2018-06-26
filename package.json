@@ -1,0 +1,17 @@
+{
+  "name": "linux-msi-keyboard-colors",
+  "description": "A simple command line application to set the keyboard colors for your msi keyboard.",
+  "version": "1.0.0",
+  "main": "linux-msi-keyboard-colors",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node linux-msi-keyboard-colors",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "args": "^5.0.0",
+    "msi-keyboard": "^0.4.1"
+  }
+}

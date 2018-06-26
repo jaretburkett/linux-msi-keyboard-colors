@@ -1,0 +1,11 @@
+# udev rules for MSI steel series keyboard
+#
+# Copy this file to the location of your distribution's udev rules, for example on Ubuntu:
+#   sudo cp 99-msi-keyboard.rules /etc/udev/rules.d/
+# Then reload udev configuration by executing:
+#   sudo reload udev
+# Or if that doesn't work try:
+#   sudo udevadm control --reload-rules
+#   sudo udevadm trigger
+
+SUBSYSTEM=="usb", ATTRS{idProduct}=="ff00", ATTRS{idVendor}=="1770", MODE="0660", GROUP="dialout"

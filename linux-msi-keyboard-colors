@@ -1,0 +1,31 @@
+#!/usr/bin/node
+const args =  require('args');
+const keyboard = require('msi-keyboard')();
+
+args
+    .option('left', 'Color left', 'red')
+    .option('middle', 'Color middle', 'green')
+    .option('right', 'Color right', 'blue')
+    .option('brightness', 'Brightness (light|low|med|high)', 'high');
+
+const flags = args.parse(process.argv);
+console.log(`Setting MSI keyboard colors to left:${flags.left}->${flags.brightness} middle:${flags.middle}->${flags.brightness} right:${flags.right}->${flags.brightness}`);
+
+
+keyboard.color('left', {
+    color: flags.left,
+    intensity: flags.brightness
+});
+
+
+keyboard.color('middle', {
+    color: flags.middle,
+    intensity: flags.brightness
+});
+
+
+
+keyboard.color('right', {
+    color: flags.right,
+    intensity: flags.brightness
+});
